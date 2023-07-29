@@ -1,0 +1,141 @@
+@font-face {
+    font-family: Gelion;
+    src: url(/Font/Gelion\ SemiBold.ttf);
+}
+
+:root {
+    /*Cores*/
+    --clr-secundaria: #101217;
+    --card-bg-color:#232833;
+    --btn-bg-color: #F5933E;
+    --btn-border-color: #FFDAB9;
+    --btn-hover-bg-color: #001F64;
+    /*Fontes*/
+    --main-font: "Gelion", sans-seri;
+    /*fc = Font Color ou cor de fonte*/
+    --fc-main-text: #FFDAB9;
+    --fc-btn-text: #FFDAB9;
+    --fc-btn-hover-text: #FFDAB9;
+    --fc-body-span-text: #FFDAB9;
+    /*fs = font size ou tamanho da fonte*/
+    --fs-header-text: 40px;
+    --fs-body-text: 60px;
+    --fs-btn-text: 26px;
+    /*fw = font width ou largura da fonte*/
+    --fw-header-text: 700;
+    --fw-body-text: 400;
+    --fw-btn-text: 700;
+    /*Transição*/
+    --btn-transition: all 1s ease;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--main-font);
+    background-color: var(--clr-secundaria);
+}
+
+/*Conteiner*/
+
+.conteiner{
+    height: 365px;
+    width: 65%;
+    background-color: var(--card-bg-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    row-gap: 1ren;
+    padding: 15px;
+    border-radius: 20px;
+}
+
+/*Cabeçalho*/
+
+.conteiner_heard{
+    width: 100%;
+    text-align: center;
+    font-size:var(--fs-header-text);
+    font-weight: var(--fw-header-text);
+    color: var(--fc-main-text);
+}
+
+/*Corpo*/
+
+.conteiner_body{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/*Caixa de cor*/
+.color_box{
+    height: 175px;
+    width: 200px;
+    background-color: rgb(255, 225, 185);
+    border-radius: 20px;
+    border:solid #00000056 1px;
+}
+
+/*informação de cor*/
+
+.color_info{
+    height: 100px;
+    width: calc(100% - 270px);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    font-size: var(--fs-body-text);
+    font-weight: var(--fw-body-text);
+    color: var(--fc-btn-text);
+}
+
+.color_info .color_value {
+    width: 85.5%;
+    background-color: #001F64;
+    border-radius: 10px;
+    margin: 10px 0;
+    padding: 15px;
+}
+
+.color_info span {
+    color: var(--fc-body-span-text);
+}
+
+/*Rodapé*/
+
+.conteiner_footer{
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.conteiner_footer .color_generate_btn{
+    border: 2px solid var(--btn-border-color);
+    border-radius: 10px;
+    padding: 10px 20px;
+    background-color: var(--btn-bg-color);
+    font-size: var(--fs-btn-text);
+    font-weight: var(--fw-btn-text);
+    color: var(--fc-btn-text);
+    cursor: pointer;
+}
+
+.conteiner_footer button:hover{
+    background-color: var(--btn-hover-bg-color);
+    color: var(--fc-btn-hover-text);
+    transition: var(--btn-transition);
+}
