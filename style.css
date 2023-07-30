@@ -20,10 +20,12 @@
     /*fs = font size ou tamanho da fonte*/
     --fs-header-text: 40px;
     --fs-body-text: 60px;
+    --fs-body-text-lateral: 12px;
     --fs-btn-text: 26px;
     /*fw = font width ou largura da fonte*/
     --fw-header-text: 700;
     --fw-body-text: 400;
+    --fw-body-text-lateral: 100;
     --fw-btn-text: 700;
     /*Transição*/
     --btn-transition: all 1s ease;
@@ -138,4 +140,71 @@ body{
     background-color: var(--btn-hover-bg-color);
     color: var(--fc-btn-hover-text);
     transition: var(--btn-transition);
+}
+
+/*Lateral*/
+
+.lateral{
+    height: 365px;
+    width: 25%;
+    background-color: var(--card-bg-color);
+    display: flex;
+    float: left;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 30px;
+    border-radius: 20px;
+    padding: 15px;
+}
+
+/*Cabeçlho*/
+
+.lateral_heard{
+    text-align: center;
+    margin-top: 2%;
+    color: var(--fc-btn-text);
+}
+
+/*Corpo*/
+
+.ultima, .penultima, .antipenultima{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 8%;
+}
+
+.cor_caixa, .cor_caixa_penultima, .cor_caixa_antipenultima{
+    height: 50px;
+    width: 35px;
+    background-color: rgb(255, 225, 185);
+    border-radius: 8px;
+    border:solid #00000056 1px;
+}
+
+.info, .info_2, .info_3 {
+    height: 5px;
+    width: calc(100% - 10px);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    font-size: var(--fs-body-text-lateral);
+    font-weight: var(--fw-body-text-lateral);
+    border-radius: 10px;
+    padding: 15px;
+    color: var(--fc-btn-text);
+}
+
+.info .valor_cor, .info_2 .valor_cor_penultima, .info_3 .valor_cor_antipenultima  {
+    width: 100%;
+    background-color: #001F64;
+    border-radius: 10px;
+    padding: 25px;
+}
+
+.info span {
+    color: var(--fc-body-span-text);
 }
